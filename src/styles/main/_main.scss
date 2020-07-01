@@ -1,0 +1,22 @@
+.main-container {
+  width: 100vw;
+
+  display: grid;
+  grid-gap: $grid-gap;
+  grid-template-columns: repeat($grid-col-amount, [col] minmax(300px, 1fr));
+  grid-template-rows: repeat($grid-row-amount, [row] minmax(300px, 1fr));
+}
+
+.metro {
+  background: black;
+}
+
+@mixin background-palette($property) {
+  background: url('../assets/images/palette-#{property}');
+}
+
+@import './tile-1';
+@import './tile-2';
+@import './tile-3';
+@import './tile-4';
+@import './tile-5';
