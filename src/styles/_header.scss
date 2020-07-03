@@ -1,6 +1,53 @@
 .header-container {
-    width: 100vw;
-    background: #12c2e9;
-    background: -webkit-linear-gradient(to right, #f64f59, #c471ed, #12c2e9);  
-    background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9); 
+  display: grid;
+  grid-template-columns: 10% 1fr 10%;
+
+  overflow: hidden;
+
+  width: 100vw;
+  background: $main-color;
+}
+
+.header-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.edit-button {
+  $glow-color: #1a71b8;
+  $text-color-1: #5487b4;   
+  $text-color-2: #2f5577;
+  
+  width: auto;
+  height: auto;
+  padding: 10px 25px;
+
+  color: $text-color-1;
+
+  font-family: 'Consolas';
+  text-align: center;
+  background: rgba($color:  $glow-color, $alpha: 0.1);
+
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 14pt;
+  overflow: hidden;
+  transition: 0.2s;
+
+  border: 1px solid #242424;
+  border-radius: 30px;
+
+  &:hover {
+    color: $text-color-2;
+    background: $glow-color;
+    box-shadow: 0 0 5px $glow-color, 0 0 7px $glow-color, 0 0 10px $glow-color; 
+
+    cursor: pointer;
+  }
+
+  &:active {
+    transform: scale(1.07);
+  }
 }

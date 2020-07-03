@@ -18,3 +18,19 @@ function App() {
 }
 
 ReactDOM.render(<App />, document.querySelector('#root'))
+
+// STOP DOMESTIC VIOLENCE ON ANIME GIRLS
+let bool = true
+setInterval(() => {
+  if (bool) {
+    document.querySelectorAll('.metro').forEach((el) => {
+      el.style.cssText = `border: 3px solid #91cadb; transform: scale(1.01);`
+    })
+    bool = false
+  } else {
+    document.querySelectorAll('.metro').forEach((el) => {
+      el.style.cssText = ``
+    })
+    bool = true
+  }
+}, 100)

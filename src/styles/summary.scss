@@ -1,9 +1,13 @@
 @import '~normalize.css';
+@import './fonts';
 
-$grid-gap: 15px;
+$grid-gap: 0.7vw;
 $grid-col-amount: 4; 
 $grid-row-amount: 2;
 $grid-tile-amount: 5;
+
+$main-color: #262626;
+$main-area-color: #424242;
 
 #root {
     display: grid;
@@ -11,6 +15,17 @@ $grid-tile-amount: 5;
     height: 100vh;
     grid-template-rows: 5vh 1fr 5vh;
     grid-gap: $grid-gap;
+
+    background: $main-area-color;
+}
+
+button,
+input, a {
+  border: 0;
+  padding: 0;
+  border:none;
+  background:none;
+  text-decoration: none;
 }
 
 @import './header';

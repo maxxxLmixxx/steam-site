@@ -1,21 +1,44 @@
 .main-container {
   width: 100vw;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.main-container-1 {
+  width: 95%;
+  height: 100%;
 
   display: grid;
+
   grid-gap: $grid-gap;
+
   grid-template-columns: repeat($grid-col-amount, [col] minmax(300px, 1fr));
   grid-template-rows: repeat($grid-row-amount, [row] minmax(300px, 1fr));
+
+  background: $main-area-color;
 }
 
 .metro {
   background: black;
-  border: 10px solid black;
+
+  cursor: pointer;
+
+  border: 1px solid black;
+  transition: 0.2s ease-in-out;
+
+  &:hover {
+    border: 3px solid #91cadb;
+    transform: scale(1.01);
+  }
 }
 
 @mixin background-palette($property) {
   background: url('../assets/images/palette-#{$property}.jpg') no-repeat center;
   background-size: cover;
-  
+  // background-size: auto 100%;
+
   /* background: url('../assets/images/palette-#{$property}.jpg');
      background-repeat: no-repeat;
      background-position: center;

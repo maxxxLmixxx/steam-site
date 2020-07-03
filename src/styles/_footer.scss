@@ -1,6 +1,4 @@
 .footer-container {
     width: 100vw;
-    background: #12c2e9;
-    background: -webkit-linear-gradient(to left, #f64f59, #c471ed, #12c2e9);  
-    background: linear-gradient(to left, #f64f59, #c471ed, #12c2e9); 
+    background: $main-color;
 }
