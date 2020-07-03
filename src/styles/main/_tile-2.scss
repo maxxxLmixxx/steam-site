@@ -1,4 +1,4 @@
 .metro-2 {
   background: yellow;
-  background-image: url('../assets/images/palette-2.jpg');
+  @include background-palette(2);
 }

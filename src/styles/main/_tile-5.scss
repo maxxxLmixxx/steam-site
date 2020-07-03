@@ -1,4 +1,4 @@
 .metro-5 {
   grid-column: span 2;
-  background-image: url('../assets/images/palette-5.jpg');
+  @include background-palette(5);
 }
