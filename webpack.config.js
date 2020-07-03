@@ -158,14 +158,24 @@ module.exports = {
         exclude: /node_modules/,
         loader: {
           loader: 'babel-loader',
-          options: babelOptions('@babel/preset-react'),
+          options: {
+            presets: [
+              '@babel/preset-env',
+              '@babel/react',
+              {
+                plugins: ['@babel/plugin-proposal-class-properties'],
+              },
+            ],
+          },
+          // options: babelOptions('@babel/preset-react'),
         },
       },
+
       // npm i -D papaparse
       // {
       //     test: /\.(xml|csv)$/,
       //     use: ['xml-loader']
       // },
-    ]
-  }
+    ],
+  },
 }
