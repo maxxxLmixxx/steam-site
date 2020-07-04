@@ -1,6 +1,23 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+const ChangeLayoutButton = ({ vector }) => {
+  const [isClicked, setIsClicked] = React.useState(false)
+
+  const handleClick = () => {}
+
+  return (
+    <div onClick={handleClick} className={`arrow arrow--${vector}`}>
+      <div className="arrow-top"></div>
+      <div className="arrow-bottom"></div>
+    </div>
+  )
+}
+
+ChangeLayoutButton.propTypes = {
+  vector: PropTypes.oneOf('left', 'right').isRequired,
+}
+
 export default class Main extends React.Component {
   static propTypes = {
     tileNumber: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
@@ -38,7 +55,9 @@ export default class Main extends React.Component {
     const { tiles } = this.state
     return (
       <div className="main-container">
+        <ChangeLayoutButton vector="left" />
         <div className="main-container-1">{tiles}</div>
+        <ChangeLayoutButton vector="right" />
       </div>
     )
   }
